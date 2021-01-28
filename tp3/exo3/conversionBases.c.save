@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int checkNULL(char* s){
+	if(s == NULL){
+		return -1;
+		}
+	else{
+		return 1;
+		}
+}
+
+int str_len(char* s){
+	int i;
+	if(checkNULL(s) != 1){
+		return -1;
+		}
+	for(i=0; s[i]!='\0'; i++) {}
+		return i;
+}
+
+int checkLowerC(char* s){
+	int i;
+	if(checkNULL(s) != 1){
+		return -1;
+		}
+	for(i=0; s[i]!='\0'; i++){
+		if(islower(s[i])==0){
+			return -1;
+		}
+	}
+	return 1;
+}
+
+int checkDigit(char * s){
+	int i;
+	if(checkNULL(s) != 1){
+		return -1
+}
+	for(i=0; s[i] /* utiliser isDigit de la même façon que islower, ensuite dans la 
+fonction principale mettre une erreur si les deux sont pas bons*/
